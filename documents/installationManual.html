@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../files/css/style.css" type="text/css" />
+    <title>Installation Manual</title>
+</head>
+<body>
+ <div id="wrapper"> 
+<h1>Installation manual</h2>
+
+<h2>Testing</h2>
+<p>This product was tested on Google Chrome Version 26, and performs as expected on this browser. Known errors in Internet Explorer up to version 9, include hidden fields not being hidden, borders appearing around images on the homepage, and pre Internet Explorer 9, the navigation doesn’t display correctly. Everything was tested using Apache version 2.4.2, and MySQL version 5.</p>
+
+<h2>Database setup</h2>
+<p>Upon loading any page of the product, the required databases and tables will be automatically created, and sample data input into them, and connection to this database will be made. This is so that when first viewing the homepage, you will be able to understand how adding to the database in the admin panel effects the homepage. </p>
+
+<p>If you require to rename the database, host, username or password, then this can easily be done by navigating to files/database/db_config.php. Here changes can easily be made to allow integration to a system that already exists.</p>
+
+<p>If you do not require the default values to be input into the database, then you can remove them (this must be done before running the product). To do this, open the file files/database/db_initialise.php and delete the data as instructed by the comments in the file.</p>
+
+<h2>Image storing</h2>
+<p>IMPORTANT - </p>
+<p>When uploading on some machines, a ‘fakepath’ is created in the image file name, which needs to be removed for the client side to work. In the files admin/files/js/addProduct.js, and admin/files/js/updateProduct.js, there is this line
+imageValue = image.value.replace("C:\\fakepath\\", "");
+It is commented so is easy to find. If the path created as a temporary path differs to this line, then images won’t work as intended. If this happens, simply change C:\\fakepath\\ to whatever appears before the image name (this will be printed in the browser console).</p>
+
+<p>When you upload a product image the image that you upload will be stored in admin/files/images/productImages. If for any reason you want to change this destination path, then you will have to alter the this in the file located at admin/files/php/submit/upload.php
+The code you will have to change is the first line in this document ($destination_path = '../../images/productImages/';). Simply enter the path that you would prefer the images to be saved to.</p>
+
+
+
+<p>If you change the path of the product images, then you will also have to alter the instances where the old path was used. This path is used in files/php/pages/homeContent.php, and you will want to replace this code ‘admin/files/images/productImages/’ with the new path that you have chosen. This occurs at line 33, 64 and 93. (These lines are commented)</p>
+
+<h2>Shop name</h2>
+<p>Renaming the title at the top of the shop page requires a simple change of one word. In the index.php file at the top of the directory there is a line commented with ‘Change Shopping to whatever you want to call your shop.’ Just change the word ‘Shopping’ with whatever you want, and this will be used for all pages on the client side. This also performs as the link back to the homepage.</p>
+
+<h2>Recently added items</h2>
+<p>If you want to change the number of recently added items on the homepage, then to do this you open the file files/php/pages/homeContent.php, and change the line commented with 
+‘//Change this number to the number of products that you want to be shown on the home page.’</p>
+
+<h1>Style</h1>
+<p>To change the client style, then you will have to change the css at files/css/style.css. You can either change the contents of this file, or simply move your own file there, if your filename is different, then you will have to change the filepath in files/php/header.php. (The line is commented to make it easy to find).</p>
+
+</div>
+</body>
+</html>
+
+

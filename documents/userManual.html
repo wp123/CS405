@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../files/css/style.css" type="text/css" />
+    <title>User Manual</title>
+</head>
+<body>
+    <div id="wrapper">
+    <h1>User manual - Admin side</h1>
+
+<p>To navigate to the admin side of the product, simply follow the link at the bottom of any page on the client side.</p>
+
+<h2>Menu</h2>
+<p>The menu at the top of the admin page should easily describe any of the tasks that you might want to do. Clicking on one of these menu items loads content relevant to that task.</p>
+
+<h2>Add product</h2>
+<p>Clicking this will load content that will allow you to add a new product.</p>
+
+<p>Validation is performed on each of the inputs here, and feedback is given if you do something wrong. </p>
+
+<p>To upload a product image, click the ‘choose file’ button, and once you have selected the file that you want to upload, press the ‘upload’ button.
+If you submit a product without uploading a product image, then a default image will be used as a placeholder until you change it on the Update Product page. </p>
+
+<p>Picking a category for a product will mean that it will be shown in that category when selected from the menu on the client side.</p>
+
+<h2>Update product</h2>
+<p>Clicking this will load content that will allow you to update a product.</p>
+
+<p>Validation is performed on each of the inputs here, and feedback is given if you do something wrong. </p>
+
+<p>Selecting the product that you wish to update will load all of the current values of that product. Make the changes that you require, and then press submit to make the changes.</p>
+
+<p>To upload a product image, click the ‘choose file’ button, and once you have selected the file that you want to upload, press the ‘upload’ button.</p>
+If you submit a product without uploading a product image, then the image that was previously used for that product will remain.
+
+<h2>Remove product</h2>
+<p>Clicking this will load content that will allow you to remove a product from the database.</p>
+
+<p>Simply select the product that you want to delete, and press submit to remove it.</p>
+
+
+<h2>Adding a category</h2>
+<p>Clicking this will load content that will allow you to add a category.</p>
+
+<p>Type the name that you want to call the category, and then choose a parent for that category.
+Selecting root will create a new main node for other categories, and will be displayed on the client side as an addition to the menu bar.</p>
+
+<p>Choosing something other than Root will make your new category a child, and will be displayed on the client side when you hover over the category that you chose.</p>
+
+<h2>Removing a category</h2>
+<p>Clicking this will load content that will allow you to delete a category.</p>
+
+<p>Selecting the category that you want to delete and pressing submit will delete that category.
+You have to be careful here, as deleting a parent category will mean that all of the children for this category will not be able to be shown on the client side, making navigation to products harder.</p>
+
+<h1>User manual - Client side</h1>
+To navigate to the client side from the admin pages, simply follow the link saying ‘shop home’ at the bottom of the page.
+
+<h2>Menu</h2>
+The menu at the top of the page forms as the main navigation for the customer. Hovering over a main category reveals the sub categories, that can be clicked to reveal products in that category.</p>
+
+<h2>Recently added</h2>
+<p>This area will display the 30 most recently added products</p>
+
+<h2>Search</h2>
+<p>This search bar will enable you to search through every product that exists in the database, and will show all of these products in a drop down list. Clicking on an item in the list will take you to the product page for that item.</p>
+
+<h2>Product page</h2>
+<p>Clicking on any of the products will take you to a page for that item, which will give you a description for that product, the stock, and the price. If the stock value is 0, then a message will appear saying that there is no stock for that item.</p>
+
+</div>
+</body>
+</html>
